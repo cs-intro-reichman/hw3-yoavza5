@@ -69,7 +69,6 @@ public class LoanCalc {
 		while (x - min > epsilon) 
 		{
 			payment = (x+min)/2;
-			num = Math.abs(endBalance(loan, rate, n, payment));
 			if(endBalance(loan, rate, n, payment) >= 0)
 			{
 				min = payment;
