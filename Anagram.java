@@ -68,7 +68,6 @@ public class Anagram {
 				str1 = str1 + (str.charAt(i));
 			}
 		}
-		System.out.println("monkey " + str1);
 		return str1;
 	} 
 	   
