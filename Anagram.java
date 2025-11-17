@@ -30,10 +30,11 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		str1 = preProcess(str1);
-		str2 = preProcess(str2);
+		str1 = preProcess(str1).replace(" ", "");
+		str2 = preProcess(str2).replace(" ", "");
+
 		if (str1.length() != str2.length()) 
-		{	
+		{
 			return false;	
 		}
         int[] charCounts = new int[26];
@@ -63,9 +64,8 @@ public class Anagram {
 		str = str.toLowerCase();
 		for(int i = 0; i< str.length(); i++) 
 		{
-			if (Character.isLetter(str.charAt(i)) || (str.charAt(i) == ' '))
+			if ((Character.isLetter(str.charAt(i))) || str.charAt(i) == ' ')
 			{
-				
 				str1 = str1 + (str.charAt(i));
 			}
 		}
@@ -79,6 +79,7 @@ public class Anagram {
 		char[] characters = str.toCharArray();
 		int n = characters.length;
 		Random rnd = new Random();
+	
 
 			for (int i = n - 1; i > 0; i--) 
 			{
