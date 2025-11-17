@@ -33,7 +33,7 @@ public class Anagram {
 		str1 = preProcess(str1);
 		str2 = preProcess(str2);
 		if (str1.length() != str2.length()) 
-		{
+		{	
 			return false;	
 		}
         int[] charCounts = new int[26];
@@ -63,8 +63,9 @@ public class Anagram {
 		str = str.toLowerCase();
 		for(int i = 0; i< str.length(); i++) 
 		{
-			if (Character.isLetter(str.charAt(i)))
+			if (Character.isLetter(str.charAt(i)) || (str.charAt(i) == ' '))
 			{
+				
 				str1 = str1 + (str.charAt(i));
 			}
 		}
